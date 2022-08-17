@@ -18,6 +18,7 @@ import {
   RootTabScreenProps,
 } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import FindLocationsScreen from '../screens/FindLocationsScreen';
 
 export default function Navigation({
 
@@ -44,6 +45,14 @@ function RootNavigator() {
         component={BottomTabNavigator}
         options={{ headerShown: false }}
       />
+
+      <Stack.Group screenOptions={{ presentation: "modal"}}>
+      <Stack.Screen
+        name="FindLocations"
+        component={FindLocationsScreen}
+        options={{ headerShown: false }}
+      />
+      </Stack.Group>
     </Stack.Navigator>
   );
 }
